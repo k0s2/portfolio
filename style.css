@@ -18,6 +18,7 @@
   src: url("./font/JKG-M_3.ttf");
 }
 
+/* ボディ */
 body {
   display: grid;
   grid-template-columns: var(--width-side) minmax(0, 1fr);
@@ -32,6 +33,35 @@ body {
   font-size: 16px;
 
   overflow: hidden;
+}
+
+/* リンク */
+a {
+  background-color: transparent;
+  border: solid 2px var(--color-main);
+  border-radius: 100px;
+
+  padding: 4px 8px;
+
+  background-color: var(--color-main);
+  color: #fff;
+  text-decoration: none;
+
+  transition: all 0.25s;
+}
+
+/* ------------------------------ */
+/* ＰＣ用 */
+/* ------------------------------ */
+
+@media (hover: hover) and (pointer: fine) {
+
+  /* ボタン：ホバー */
+  a:hover {
+    background-color: #fff;
+    color: var(--color-main);
+  }
+
 }
 
 /* ------------------------------ */
@@ -146,7 +176,7 @@ body {
   color: #fff;
   border: solid 2px var(--color-main);
   border-left: none;
-  border-radius: 0 8px 8px 0;
+  border-radius: 0 100px 100px 0;
 
   padding: 8px;
   margin: 4px 0;
@@ -263,11 +293,11 @@ body {
 }
 
 /* ------------------------------ */
-/* 担当箇所／ポイント */
+/* ノート */
 /* ------------------------------ */
 
-/*  */
-.container>.charge_point {
+/* ラッパー */
+.charge_point {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -276,16 +306,16 @@ body {
   font-size: 14px;
 }
 
-/*  */
-.container>.charge_point>p {
+/* 文章 */
+.charge_point>p {
   display: flex;
   align-items: center;
 
   margin: 0;
 }
 
-/*  */
-.container>.charge_point>p>.title {
+/* 見出し */
+.charge_point>p>.title {
   display: flex;
   justify-content: center;
 
