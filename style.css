@@ -178,7 +178,7 @@ body {
 /* カテゴリー */
 .container>.title>.category {
   width: fit-content;
-  padding: 6px 8px;
+  padding: 6px 8px 0px 8px;
 
   color: var(--color-main);
   font-size: 14px;
@@ -205,25 +205,30 @@ body {
 .container>.charge_point {
   display: flex;
   align-items: center;
-  justify-content: end;
+  flex-wrap: wrap;
+  gap: 16px;
 
-  width: 100%;
-
-  margin-top: 12px;
-  margin-right: 8px;
-
+  margin-top: 16px;
   font-size: 14px;
 }
 
 /*  */
-.container>.charge_point>.title {
+.container>.charge_point>p {
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+}
+
+/*  */
+.container>.charge_point>p>.title {
   display: flex;
   justify-content: center;
 
-  min-width: 60px;
+  min-width: 5em;
 
   margin-right: 12px;
-  padding: 4px 8px;
+  padding: 6px;
 
   color: #fff;
 
@@ -239,6 +244,8 @@ body {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
+
+  margin-top: 16px;
   max-width: 1280px;
 }
 
