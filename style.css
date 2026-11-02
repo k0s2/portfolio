@@ -64,7 +64,6 @@ body {
   display: inline-block;
 
   height: fit-content;
-
   padding: 8px 4px;
 
   color: #fff;
@@ -74,7 +73,7 @@ body {
 /*  */
 .section_header .date>.head {
   padding: 4px 8px;
-  margin-right: 4px;
+  margin-right: 12px;
 
   color: var(--color-main);
   font-size: 16px;
@@ -85,10 +84,11 @@ body {
 
 /* スマホ用 */
 @media screen and (max-width: 820px) {
+
   .section_header .title {
     font-size: 30px;
-    display: block;
   }
+
 }
 
 /* ====================================================== */
@@ -99,13 +99,6 @@ body {
 .section_detail {
   display: flex;
   height: calc(100% - var(--height-header));
-}
-
-/* スマホ用 */
-@media screen and (max-width: 700px) {
-  .section_detail {
-    height: calc(100% - var(--height-header) - var(--height-side));
-  }
 }
 
 /* ====================================================== */
@@ -165,9 +158,12 @@ body {
 
 /* スマホ用 */
 @media screen and (max-width: 820px) {
+
+  /* 背景 */
   .section_side {
     display: none;
   }
+
 }
 
 /* =========================== */
@@ -323,6 +319,7 @@ body {
 /* ------------------------------ */
 
 @media screen and (max-width: 1200px) {
+
   .container .item {
     width: 100%;
   }
@@ -330,9 +327,11 @@ body {
   .container.sp_app .item {
     width: 45%;
   }
+
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 820px) {
+
   .section_main {
     margin-left: 0;
   }
@@ -340,4 +339,55 @@ body {
   .container.sp_app .item {
     width: 100%;
   }
+
+}
+
+/* ====================================================== */
+/* ■ ボタンエリア
+/* ====================================================== */
+
+/*  */
+.section_button {
+  display: flex;
+  justify-content: end;
+  gap: 12px;
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  margin: 0 32px 16px 0;
+}
+
+/* ボタン */
+.section_button button {
+  background-color: var(--color-main);
+  color: #fff;
+  border: solid 2px var(--color-main);
+  border-radius: 100px;
+
+  width: 40px;
+  height: 40px;
+
+  transition: all 0.25s;
+
+  cursor: pointer;
+}
+
+/* ボタン：ホバー */
+.section_button button:hover {
+  background-color: #fff;
+  color: var(--color-main);
+}
+
+/**
+  * ＰＣ用
+  */
+@media screen and (min-width: 821px) {
+
+  /*  */
+  .section_button {
+    display: none;
+  }
+
 }
