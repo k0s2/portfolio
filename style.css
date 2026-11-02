@@ -114,21 +114,59 @@ body {
 
 /* 背景 */
 .section_side {
+  padding: 8px;
+  padding-left: 0;
   width: var(--width-side);
-  height: 100%;
 
   background-color: var(--color-sub);
+
+  z-index: 100;
+}
+
+/* カテゴリー */
+.section_side>p {
+  margin-bottom: 8px;
+  padding-left: 8px;
+
+  color: var(--color-main);
+}
+
+/* ジャンプボタン */
+.section_side a {
+  display: block;
+
+  background-color: var(--color-main);
+  color: #fff;
+  border: solid 2px var(--color-main);
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+
+  padding: 8px;
+  margin: 4px 0;
+
+  cursor: pointer;
+
+  transition: all 0.25s;
+
+  font-size: 12px;
+  text-decoration: none;
+}
+
+/* ジャンプボタン：間隔 */
+.section_side a+a {
+  margin-top: 8px;
+}
+
+/* ジャンプボタン：ホバー */
+.section_side a:hover {
+  background-color: #fff;
+  color: var(--color-main);
 }
 
 /* スマホ用 */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 820px) {
   .section_side {
-    position: fixed;
-    bottom: 0;
-    bottom: 0;
-
-    width: 100svw;
-    height: var(--height-side);
+    display: none;
   }
 }
 
@@ -151,6 +189,8 @@ body {
   flex-flow: wrap;
   justify-content: center;
 
+  padding-top: 16px;
+  margin-top: -16px;
   margin-bottom: 16px;
 }
 
@@ -198,7 +238,7 @@ body {
 }
 
 /* ------------------------------ */
-/* 担当箇所 */
+/* 担当箇所／ポイント */
 /* ------------------------------ */
 
 /*  */
@@ -206,7 +246,7 @@ body {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 16px 32px;
 
   margin-top: 16px;
   font-size: 14px;
