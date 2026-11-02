@@ -177,6 +177,7 @@ body {
   padding: 16px 32px;
 
   overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 /* コンテナ */
@@ -280,8 +281,9 @@ body {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
+  gap: 24px;
 
-  margin-top: 16px;
+  margin-top: 36px;
   width: 100%;
   max-width: 1280px;
 }
@@ -291,7 +293,6 @@ body {
   justify-content: center;
 
   width: 45%;
-  margin: 16px;
 }
 
 .container .item>img {
