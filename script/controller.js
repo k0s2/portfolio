@@ -4,8 +4,8 @@ $(function () {
     // タグ取得
     // ----------------------------------------
 
-    const main = document.querySelector(".section_main");
-    const sections = $(".section_main .container");
+    const main = document.querySelector(".containers");
+    const targets = main.querySelectorAll(".container");
 
     // ----------------------------------------
     // 現在のタグ位置を取得
@@ -18,10 +18,10 @@ $(function () {
 
         let index = -1;
 
-        sections.each(function (i) {
+        targets.forEach(function (section, i) {
 
             const sectionTop =
-                this.getBoundingClientRect().top - mainTop + scrollTop;
+                section.getBoundingClientRect().top - mainTop + scrollTop;
 
             if (sectionTop <= scrollTop + 1) {
                 index = i;
@@ -39,14 +39,14 @@ $(function () {
 
     function scrollToSection(index) {
 
-        if (index < 0 || index >= sections.length) {
+        if (index < 0 || index >= targets.length) {
             return;
         }
 
         const mainTop = main.getBoundingClientRect().top;
 
         const targetTop =
-            sections[index].getBoundingClientRect().top
+            targets[index].getBoundingClientRect().top
             - mainTop
             + main.scrollTop;
 
@@ -79,7 +79,7 @@ $(function () {
 
         const index = getCurrentIndex();
 
-        if (index < sections.length - 1) {
+        if (index < targets.length - 1) {
             scrollToSection(index + 1);
         }
 
