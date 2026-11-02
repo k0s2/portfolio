@@ -16,6 +16,7 @@
 @font-face {
   font-family: "MyFont";
   src: url("./font/JKG-M_3.ttf");
+  font-display: swap;
 }
 
 /* ボディ */
